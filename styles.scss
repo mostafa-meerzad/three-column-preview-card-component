@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+$first-color: #e28525;
+$second-color: #016972;
+$third-color: #00403f;
+#cards {
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
+  // @font-face {
+  //   font-family: myFont;
+  //   src: url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+  // }
+
+  font-family: "Lexend Deca", sans-serif;
+
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-family: "Lexend Deca", sans-serif;
+
+  font-weight: 400;
+  @media screen and (min-width: 1088px) {
+    .card:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    .card:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  @media screen and (max-width: 1088px) {
+    flex-direction: column;
+    align-items: center;
+    .card:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .card:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  .card {
+    width: 20rem;
+    height: 30rem;
+
+    padding: 3rem;
+    // padding-bottom: 0;
+    color: white;
+    .title {
+      font-size: xx-large;
+    }
+    .description {
+      line-height: 1.5rem;
+      margin-top: 1.5rem;
+      opacity: 0.7;
+    }
+    .btn {
+      position: relative;
+      bottom: -20%;
+      font-size: medium;
+      font-weight: normal;
+      text-decoration: none;
+
+      padding: 0.7rem 1.7rem;
+
+      border-radius: 50px;
+      border-style: solid;
+      border-color: white;
+      background-color: inherit;
+      color: white;
+      transition: background-color 100ms ease-in-out;
+    }
+  }
+  .card:nth-child(1) {
+    background-color: $first-color;
+
+    .btn:hover {
+      color: $first-color;
+      background-color: white;
+    }
+  }
+  .card:nth-child(2) {
+    background-color: $second-color;
+    .btn:hover {
+      color: $second-color;
+      background-color: white;
+    }
+  }
+  .card:nth-child(3) {
+    background-color: $third-color;
+
+    .btn:hover {
+      color: $third-color;
+      background-color: white;
+    }
+  }
+}
